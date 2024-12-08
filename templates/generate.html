@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='generate.css') }}">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Dashboard</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="{{ url_for('dashboard') }}">Home</a></li>
+            <li><a href="{{ url_for('generate') }}">Generate </a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <h1>Generate a New Image or Video</h1>
+            <form action="{{ url_for('generate') }}" method="POST">
+                <label for="image_input"><h3>Enter Parameters or Description:</h3></label>
+                <input type="text" id="image_input" name="image_input" required>
+
+                    <label>
+                      <input type="radio" name="generate_type" value="image" checked="checked">Image
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <label>
+                      <input type="radio" name="generate_type" value="video">Video
+                      <span class="checkmark"></span>
+                    </label>
+                <button type="submit">Generate</button>
+                <label>Once the content has been generated it would shared on your email</label>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

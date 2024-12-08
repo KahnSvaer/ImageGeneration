@@ -1,0 +1,52 @@
+# ====== Python-Specific Files ======
+__pycache__/
+*.pyc
+*.pyo
+
+# ====== Virtual Environment ======
+env/
+venv/
+.venv/
+
+# ====== Logs and Debug Files ======
+*.log
+*.out
+*.err
+
+# ====== IDE/Editor Config Files ======
+.vscode/
+*.idea/*
+*.sublime-workspace
+*.sublime-project
+
+# ====== OS-Specific Files ======
+.DS_Store
+Thumbs.db
+
+# ====== Secrets/Environment Variables ======
+.env
+
+# ====== Build and Distribution Files ======
+build/
+dist/
+*.egg-info/
+
+# ====== Test and Coverage Reports ======
+.pytest_cache/
+.tox/
+.coverage
+.hypothesis/
+
+# ====== Jupyter Notebooks ======
+.ipynb_checkpoints/
+
+# ====== Package Manager Files ======
+node_modules/
+*.lock
+
+# ====== Database Files ======
+*.db
+*.sqlite3
+
+# Config file
+/service-account-key.json
